@@ -1,9 +1,12 @@
 # Raspberry-Pi-4
 
-- Write the image to microSD card - used 64-bit Raspberry Pi OS lite image
-- Use the Raspberry Pi Imager (install using Synaptic)
-- Remember to add WiFi and SSH settings
+- Install the Raspberry Pi Imager using Synaptic.
+- Write the image to microSD card - using 64-bit Raspberry Pi OS lite image and include Wi-Fi and SSH settings.
+- Connect using a cable, using ```ssh pi@raspberrypi.local``` and the SSH password set when creating the microSD card.
+- ```sudo apt update``` and ```sudo apt full-upgrade``` to check for updates.
+- To set the fan temperature, ```sudo raspi-config```, select ```performance``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
+- To set the Wi-Fi:
+    ```nmcli dev wifi list``` to list networks
+    ```sudo nmcli --ask dev wifi connect <example_ssid>``` to connect to a SSID
 
-- To access the Raspberry Pi, ```ssh pi@raspberrypi.local``` and use the SSH password set when creating the microSD card.
-- To set the temperature for the fan, ```sudo nano /boot/config.txt``` and add ```dtoverlay=gpio-fan,gpiopin=18,temp=80000``` at the end of the file.  80000 is 80*C, the point at which the processor will throttle if too warm.
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
