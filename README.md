@@ -9,10 +9,14 @@
     ```nmcli dev wifi list``` to list networks
     ```sudo nmcli --ask dev wifi connect <example_ssid>``` to connect to a SSID
 - To add a USB stick and automount it:
-    ```sudo blkid``` to get the UUID
+
+    ```sudo blkid``` to get the UUID.
+  
     ```sudo mkdir /media/myUSB``` to create a mount point.
+  
     ```sudo nano /etc/fstab``` and add the line ```UUID=[UUID of USB drive] /media/myUSB vfat uid=pi,gid=pi 0 2```
-      Save and reboot Raspberry PI.  Running ```df -H``` should show the USB stick automounted.
+
+  Save and reboot Raspberry PI.  Running ```df -H``` should show the USB stick automounted.
 
 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
