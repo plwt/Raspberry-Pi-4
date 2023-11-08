@@ -22,7 +22,7 @@
   - ```sudo apt update``` and ```sudo apt install snapd```
   - ```sudo nano /boot/firmware/cmdline.txt``` and set the text to ```cgroup_enable=memory cgroup_memory=1 net.ifnames=0 dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait```
   - ```sudo reboot```
-  - ```sudo snap install microk8s --classic --channel=1.25```
+  - ```sudo snap install microk8s --classic --channel=1.25```  (does it need --channel=1.25??)
   - ```grep mem /proc/cgroups | awk '{ print $4 }'``` should return ```1```
   - ```microk8s status --wait-ready``` should show that MicroK8s is ready.
 
