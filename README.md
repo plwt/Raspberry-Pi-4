@@ -42,3 +42,4 @@
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
 - https://peppe8o.com/automount-usb-storage-with-raspberry-pi-os-lite-fstab-and-autofs/
 - https://zenlot.medium.com/raspberry-pi-4-and-micro8ks-setup-4bc5ee6eb7d7
+- https://gist.github.com/felipecruz91/e2414cd1ba76d71739cf0fc8302109da
