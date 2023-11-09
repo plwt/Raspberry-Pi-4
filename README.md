@@ -1,7 +1,7 @@
 # Raspberry-Pi-4
 
 - Install the Raspberry Pi Imager using Synaptic.
-- Write the image to microSD card - using 64-bit Raspberry Pi OS lite image and include Wi-Fi and SSH settings.
+- Write the image to a microSD card - using a 64-bit Raspberry Pi OS lite image and include Wi-Fi and SSH settings.
 - Connect using a cable, using ```ssh pi@raspberrypi.local``` and the SSH password set when creating the microSD card.
 - ```sudo apt update``` and ```sudo apt full-upgrade``` to check for updates.
 - To set the fan temperature, ```sudo raspi-config```, select ```performance``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
@@ -28,9 +28,17 @@
 
 - To install Docker:
   - ```curl -sSL get.docker.com | sh && sudo usermod pi -aG docker```
+  
+- To install Kubernetes dashboard:
   - ```sudo snap install kubectl --classic```
+  - On laptop ```ssh -L 8001:localhost:8001 pi@raspberrypi.local```
+  - On Raspberry Pi ```microk8s.kubectl proxy --accept-hosts=.\* --address=0.0.0.0```
+  - On laptop http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
+  - On Raspberry Pi ```token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1) microk8s.kubectl -n kube-system describe secret $token```
+  - Copy and paste the token from the terminal into the prompt in Fx.
   - 
 
 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
 - https://peppe8o.com/automount-usb-storage-with-raspberry-pi-os-lite-fstab-and-autofs/
+- https://zenlot.medium.com/raspberry-pi-4-and-micro8ks-setup-4bc5ee6eb7d7
