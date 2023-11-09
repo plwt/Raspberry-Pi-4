@@ -36,7 +36,9 @@
   - On laptop http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
   - On Raspberry Pi ```token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1) microk8s.kubectl -n kube-system describe secret $token```
   - Copy and paste the token from the terminal into the prompt in Fx.
-  - 
+
+- To find the operating temperature:
+  - ```sudo vcgencmd measure_temp```
 
 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
