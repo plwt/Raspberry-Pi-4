@@ -39,6 +39,9 @@
 
 - To find the operating temperature:
   - ```sudo vcgencmd measure_temp```
+ 
+- To update Kubernetes dashboard:
+  - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
 
 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
