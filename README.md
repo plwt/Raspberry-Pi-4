@@ -45,6 +45,10 @@
  
 - To turn on DNS:
   - ```microk8s enable dns```
+ 
+- To install Nextcloud:
+  - ```https://peppe8o.com/personal-cloud-with-raspberry-pi-and-nextcloud-on-docker/```
+  - ```https://help.nextcloud.com/t/how-to-configure-an-external-usb-drive-with-nextcloudpi/126376```
 
 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
@@ -53,3 +57,4 @@
 - https://gist.github.com/felipecruz91/e2414cd1ba76d71739cf0fc8302109da
 - https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
 - https://github.com/kubernetes/dashboard
+- https://stackoverflow.com/questions/66486218/the-docker-official-image-hello-world-keep-reporting-back-off-restarting-failed
