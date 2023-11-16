@@ -29,7 +29,10 @@
   - ```curl -sSL get.docker.com | sh && sudo usermod pi -aG docker```
   
 - To install Kubernetes dashboard:
-  - ```sudo snap install kubectl --classic```
+  - ```sudo snap install kubectl --classic```  GOOD!
+
+ADD enable command from gist
+
   - On laptop ```ssh -L 8001:localhost:8001 pi@raspberrypi.local```
   - On Raspberry Pi ```microk8s.kubectl proxy --accept-hosts=.\* --address=0.0.0.0```
   - On laptop http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
@@ -39,13 +42,13 @@
 - To find the operating temperature:
   - ```sudo vcgencmd measure_temp```
  
-- To update Kubernetes dashboard:
+- To update Kubernetes dashboard:  MOVE!
   - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
  
-- To turn on DNS:
+- To turn on DNS:  MOVE!  + ADD LINE! sudo usermod -a -G microk8s pi
   - ```microk8s enable dns```
  
-- To reboot Raspberry Pi:
+- To reboot Raspberry Pi:  MOVE!
   - ```sudo reboot```
  
 - To install Nextcloud:
