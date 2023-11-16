@@ -24,8 +24,7 @@
   - ```sudo reboot```
   - ```sudo snap install microk8s --classic --channel=1.25```  (does it need --channel=1.25??)
   - ```grep mem /proc/cgroups | awk '{ print $4 }'``` should return ```1```
-  - ```microk8s status --wait-ready``` should show that MicroK8s is ready.
-
+ 
 - To install Docker:
   - ```curl -sSL get.docker.com | sh && sudo usermod pi -aG docker```
   
