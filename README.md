@@ -46,7 +46,13 @@
 - To turn on DNS:
   - ```microk8s enable dns```
  
+- To reboot Raspberry Pi:
+  - ```sudo reboot```
+ 
 - To install Nextcloud:
+  - Format USB to ext4: ```sudo umount /dev/sda1 && sudo mkfs.ext4 /dev/sda1```
+  - ```sudo nano /etc/fstab``` and add the line ```UUID=[UUID of USB drive] /media/myUSB ext4 -fstype=auto,rw uid=pi,gid=pi 0 2```
+  - 
   - ```https://peppe8o.com/personal-cloud-with-raspberry-pi-and-nextcloud-on-docker/```
   - ```https://help.nextcloud.com/t/how-to-configure-an-external-usb-drive-with-nextcloudpi/126376```
 
