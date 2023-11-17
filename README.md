@@ -66,3 +66,4 @@ ADD enable command from gist
 - https://www.cyberciti.biz/faq/linux-find-out-raspberry-pi-gpu-and-arm-cpu-temperature-command/
 - https://github.com/kubernetes/dashboard
 - https://stackoverflow.com/questions/66486218/the-docker-official-image-hello-world-keep-reporting-back-off-restarting-failed
+- https://sysdig.com/learn-cloud-native/kubernetes-101/what-is-microk8s/
