@@ -21,44 +21,34 @@
 - To install Microk8s:
   - ```sudo apt update``` and ```sudo apt install snapd```
   - ```sudo nano /boot/firmware/cmdline.txt``` and set the text to ```cgroup_enable=memory cgroup_memory=1 net.ifnames=0 dwc_otg.lpm_enable=0 console=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait```
-  - ```sudo reboot```
   - ```sudo snap install microk8s --classic```
   - ```grep mem /proc/cgroups | awk '{ print $4 }'``` should return ```1```
+  - ```sudo usermod -a -G microk8s $USER```
+  - ```sudo chown -f -R $USER ~/.kube```
+  - ```sudo reboot```
+  - ```microk8s enable dns```
  
 - To install Docker:
   - ```curl -sSL get.docker.com | sh && sudo usermod pi -aG docker```
   
 - To install Kubernetes dashboard:
   - ```sudo snap install kubectl --classic```  GOOD!
-
-ADD enable command from gist
-
+  - ```microk8s enable dashboard```
   - On laptop ```ssh -L 8001:localhost:8001 pi@raspberrypi.local```
   - On Raspberry Pi ```microk8s.kubectl proxy --accept-hosts=.\* --address=0.0.0.0```
   - On laptop http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login
   - On Raspberry Pi ```token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1) microk8s.kubectl -n kube-system describe secret $token```
   - Copy and paste the token from the terminal into the prompt in Fx.
+ 
+- To update Kubernetes dashboard:  MOVE!
+  - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
+  
+- To reboot Raspberry Pi:
+  - ```sudo reboot```
 
 - To find the operating temperature:
   - ```sudo vcgencmd measure_temp```
  
-- To update Kubernetes dashboard:  MOVE!
-  - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
- 
-- To turn on DNS:  MOVE!  + ADD LINE! sudo usermod -a -G microk8s pi
-  - ```microk8s enable dns```
- 
-- To reboot Raspberry Pi:  MOVE!
-  - ```sudo reboot```
- 
-- To install Nextcloud:
-  - Format USB to ext4: ```sudo umount /dev/sda1 && sudo mkfs.ext4 /dev/sda1```
-  - ```sudo nano /etc/fstab``` and add the line ```UUID=[UUID of USB drive] /media/myUSB ext4 -fstype=auto,rw uid=pi,gid=pi 0 2```
-  - 
-  - ```https://peppe8o.com/personal-cloud-with-raspberry-pi-and-nextcloud-on-docker/```
-  - ```https://help.nextcloud.com/t/how-to-configure-an-external-usb-drive-with-nextcloudpi/126376```
-
-
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
 - https://peppe8o.com/automount-usb-storage-with-raspberry-pi-os-lite-fstab-and-autofs/
 - https://zenlot.medium.com/raspberry-pi-4-and-micro8ks-setup-4bc5ee6eb7d7
