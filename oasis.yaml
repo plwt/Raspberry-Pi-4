@@ -1,10 +1,10 @@
 version: '3.3'
 services:
-    - oasis:
-        container_name: oasis
-        volumes:
+     oasis:
+        - container_name: oasis
+        - volumes:
             - '/docker/oasis/data:/opt/oasis/data'
             - '/docker/oasis/storage:/media/myUSB'
-        ports:
+        - ports:
             - '8000:8000'
-        image: machengim/oasis
+        - image: machengim/oasis
