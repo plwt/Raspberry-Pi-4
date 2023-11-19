@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-    oasis:
+    - oasis:
         container_name: oasis
         volumes:
             - '/docker/oasis/data:/opt/oasis/data'
