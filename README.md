@@ -32,7 +32,7 @@
   - ```curl -sSL get.docker.com | sh && sudo usermod pi -aG docker```
   
 - To install Kubernetes dashboard:
-  - ```sudo snap install kubectl --classic```  GOOD!
+  - ```sudo snap install kubectl --classic```
   - ```microk8s enable dashboard```
   - On laptop ```ssh -L 8001:localhost:8001 pi@raspberrypi.local```
   - On Raspberry Pi ```microk8s.kubectl proxy --accept-hosts=.\* --address=0.0.0.0```
@@ -40,7 +40,7 @@
   - On Raspberry Pi ```token=$(microk8s.kubectl -n kube-system get secret | grep default-token | cut -d " " -f1) microk8s.kubectl -n kube-system describe secret $token```
   - Copy and paste the token from the terminal into the prompt in Fx.
  
-- To update Kubernetes dashboard:  MOVE!
+- To update Kubernetes dashboard:
   - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
   
 - To reboot Raspberry Pi:
