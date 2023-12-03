@@ -1,9 +1,26 @@
+# Raspberry-Pi-4 with NextcloudPi
+
+- Install the Raspberry Pi Imager using Synaptic.
+- Get the lastest image from 
+- Write the image to a microSD card - include Wi-Fi and SSH settings.
+- Connect using a cable, using ```ssh pi@nextcloudpi.local``` and the SSH password set when creating the microSD card.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "nextcloudpi.local"``` to remove if connected before.  Use ```ssh xxx.xxx.x.xxx``` if unknown.
+- To set the fan temperature, ```sudo raspi-config```, select ```Performance Options``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
+- To set the WiFi, ```sudo raspi-config```, select ```System Options``` and ```Wireless LAN```
+- Save and the config and the Raspberry Pi will reboot.
+- Enter the IP in the address bar in Fx.
+- You will see two sets of credentials:
+  - The first is to access the admin console at https://nextcloudpi.local:4443
+  - The second is as a user at https://nextcloudpi.local
+- Follow the first run wizard to set USB storage and set data to USB.
+
+
+
 # Raspberry-Pi-4
 
 - Install the Raspberry Pi Imager using Synaptic.
 - Write the image to a microSD card - using a 64-bit Raspberry Pi OS lite image and include Wi-Fi and SSH settings.
-- Connect using a cable, using ```ssh pi@raspberrypi.local``` and the SSH password set when creating the microSD card.
-- ```sudo apt update``` and ```sudo apt full-upgrade``` to check for updates.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "raspberrypi.local"``` to remove if connected before.
+- Connect using a cable, using ```ssh pi@raspberrypi.local``` and the SSH password set when creating the microSD card.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "raspberrypi.local"``` to remove if connected before.
+- ```sudo apt update``` and ```sudo apt full-upgrade``` to check for updates.  
 - To set the fan temperature, ```sudo raspi-config```, select ```performance``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
 - To set the Wi-Fi:
     ```nmcli dev wifi list``` to list networks
