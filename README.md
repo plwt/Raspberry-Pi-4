@@ -1,7 +1,16 @@
+# Raspberry-Pi-4
+
+- To reboot Raspberry Pi:
+  - ```sudo reboot```
+
+- To find the operating temperature:
+  - ```sudo vcgencmd measure_temp```
+    
+
 # Raspberry-Pi-4 with NextcloudPi
 
 - Install the Raspberry Pi Imager using Synaptic.
-- Get the lastest image from 
+- Get the latest image from 
 - Write the image to a microSD card - include Wi-Fi and SSH settings.
 - Connect using a cable, using ```ssh pi@nextcloudpi.local``` and the SSH password set when creating the microSD card.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "nextcloudpi.local"``` to remove if connected before.  Use ```ssh xxx.xxx.x.xxx``` if unknown.
 - To set the fan temperature, ```sudo raspi-config```, select ```Performance Options``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
@@ -12,10 +21,11 @@
   - The first is to access the admin console at https://nextcloudpi.local:4443
   - The second is as a user at https://nextcloudpi.local
 - Follow the first run wizard to set USB storage and set data to USB.
+- Login as a user and set a separate account for general day-to-day use.
+- See ```https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi```
 
 
-
-# Raspberry-Pi-4
+# Raspberry-Pi-4 with k8s
 
 - Install the Raspberry Pi Imager using Synaptic.
 - Write the image to a microSD card - using a 64-bit Raspberry Pi OS lite image and include Wi-Fi and SSH settings.
@@ -60,12 +70,7 @@
 - To update Kubernetes dashboard:
   - See ```https://github.com/kubernetes/dashboard/releases``` and follow instructions there.  Prefix the installation command with ```microk8s```
   
-- To reboot Raspberry Pi:
-  - ```sudo reboot```
 
-- To find the operating temperature:
-  - ```sudo vcgencmd measure_temp```
- 
 - https://www.raspberrypi.com/documentation/computers/configuration.html#set-up-a-headless-raspberry-pi
 - https://peppe8o.com/automount-usb-storage-with-raspberry-pi-os-lite-fstab-and-autofs/
 - https://zenlot.medium.com/raspberry-pi-4-and-micro8ks-setup-4bc5ee6eb7d7
