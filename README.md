@@ -13,7 +13,7 @@
 - Get the latest image from 
 - Write the image to a microSD card - include Wi-Fi and SSH settings.
 - Connect using a cable, using ```ssh pi@nextcloudpi.local``` and the SSH password set when creating the microSD card.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "nextcloudpi.local"``` to remove if connected before.  Use ```ssh xxx.xxx.x.xxx``` if unknown.
-- To set the fan temperature, ```sudo raspi-config```, select ```Performance Options``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 80.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
+- To set the fan temperature, ```sudo raspi-config```, select ```Performance Options``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 60.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
 - To set the WiFi, ```sudo raspi-config```, select ```System Options``` and ```Wireless LAN```
 - Save and the config and the Raspberry Pi will reboot.
 - Enter the IP in the address bar in Fx.
