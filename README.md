@@ -10,7 +10,7 @@
 # Raspberry-Pi-4 with NextcloudPi
 
 - Install the Raspberry Pi Imager using Synaptic.
-- Get the latest image from ```https://nextcloudpi.com/```
+- Get the latest image from https://nextcloudpi.com/
 - Write the image to a microSD card - include Wi-Fi and SSH settings.
 - Connect using a cable, using ```ssh pi@nextcloudpi.local``` and the SSH password set when creating the microSD card.  Use ```ssh-keygen -f "/home/paul/.ssh/known_hosts" -R "nextcloudpi.local"``` to remove if connected before.  Use ```ssh xxx.xxx.x.xxx``` if unknown.
 - To set the fan temperature, ```sudo raspi-config```, select ```Performance Options``` and ```P3 Fan```.  Set the GPIO to 14 and the temperature to 60.  (https://www.raspberrypi.com/products/raspberry-pi-4-case-fan/)
@@ -22,7 +22,7 @@
   - The second is as a user at https://nextcloudpi.local
 - Follow the first run wizard to set USB storage and set data to USB.
 - Login as a user and set a separate account for general day-to-day use.
-- See ```https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi```, ```https://docs.nextcloud.com/server/27/user_manual/en/index.html```, ```https://nextcloud.com/contribute/``` 
+- See https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi, https://docs.nextcloud.com/server/27/user_manual/en/index.html, https://nextcloud.com/contribute/ 
 
 
 # Raspberry-Pi-4 with NAS
