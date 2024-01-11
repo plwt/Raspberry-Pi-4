@@ -22,7 +22,8 @@
   - The second is as a user at https://nextcloudpi.local
 - Follow the first run wizard to set USB storage and set data to USB.
 - Login as a user and set a separate account for general day-to-day use.
-- See https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi, https://docs.nextcloud.com/server/27/user_manual/en/index.html, https://nextcloud.com/contribute/ 
+- See https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi, https://docs.nextcloud.com/server/27/user_manual/en/index.html, https://nextcloud.com/contribute/
+- Turn off LED - https://raspberrytips.com/disable-leds-on-raspberry-pi/
 
 
 # Raspberry-Pi-4 with NAS
