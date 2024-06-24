@@ -24,6 +24,7 @@
 - Login as a user and set a separate account for general day-to-day use.
 - See https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi, https://docs.nextcloud.com/server/27/user_manual/en/index.html, https://nextcloud.com/contribute/
 - Turn off LED - https://raspberrytips.com/disable-leds-on-raspberry-pi/
+- To measured the temperature - ```/usr/bin/vcgencmd measure_temp``
 
 
 # Raspberry-Pi-4 with NAS
