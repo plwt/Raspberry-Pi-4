@@ -25,6 +25,7 @@
 - See https://opensource.com/article/23/3/nextcloudpi-nextcloud-raspberry-pi, https://docs.nextcloud.com/server/27/user_manual/en/index.html, https://nextcloud.com/contribute/
 - Turn off LED - https://raspberrytips.com/disable-leds-on-raspberry-pi/
 - To measured the temperature - ```/usr/bin/vcgencmd measure_temp```
+- To turn off HDMI - https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README & https://chaos.social/@dividuum/113494506345793623
 
 
 # Raspberry-Pi-4 with NAS
