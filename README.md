@@ -28,6 +28,19 @@
 - To turn off HDMI - https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README & https://chaos.social/@dividuum/113494506345793623 & https://passthehash.co.uk/posts/Headless-Rasperry-Pi-Setup/
 
 
+sudo nano /boot/config.txt
+
+Overlays
+
+dtoverlay=gpio-fan,gpiopin=14,temp=60000
+dtoverlay=disable-bt
+dtparam=pwr_led_activelow=off
+dtparam=act_led_trigger=none
+dtparam=act_led_activelow=off
+dtparam=eth_led0=4
+dtparam=eth_led1=4
+dtoverlay=vc4-kms-v3d,nohdmi
+
 # Raspberry-Pi-4 with NAS
 
 - https://www.raspberrypi.com/tutorials/nas-box-raspberry-pi-tutorial/
